@@ -10,6 +10,6 @@ Les problématiques auxquelles nous devions répondre étaient la mise en ligne 
 
 Le projet a été réalisé en se basant sur un backlog défini par l’équipe et suivi durant 5 semaines, respectant le principe du workflow et la méthode Agile. 
 
-<h2>STACKS UTILISÉS</h2>
+<h2>STACKS UTILISÉES</h2>
 
 HTML5 - CSS3 - Twig - MySQL - JavaScript - Architecture MVC
