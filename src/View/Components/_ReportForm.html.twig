@@ -1,0 +1,25 @@
+<section class="reportSection">
+    <div id="modal-center-1" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog container  uk-modal-body uk-margin-auto-vertical">
+<button class="uk-modal-close-default" type="button" uk-close></button>
+    <div class="report">
+        <h2>Signalez une annonce</h2>
+            <p>Pourquoi souhaitez-vous signaler cette publication ?</p>
+                <form action="" method="post">
+                <div class ="reportChoice">
+                    {% for report in reports %}
+                        <label for="test"> 
+                            <input type="radio" name="test" value= {{ report.id }}>
+                                {{ report.report_reason }} 
+                        </label>
+                        <br>
+                    {% endfor %}
+                </div>
+                        <div class="form-button">
+                            <input type="submit" name="loginButton" value="Envoyez" class="button-1 login-submit">
+                        </div>
+                </form>
+</div>
+</div>
+    </div>
+</section>

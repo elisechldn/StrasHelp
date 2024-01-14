@@ -1,0 +1,50 @@
+<nav class="nav_desktop uk-navbar" uk-sticky>
+	<div class="uk-navbar-left">
+		<ul class="uk-navbar-nav uk-flex-middle">
+			<li><a class="uk-logo" href="#" onclick="easterEgg();"><img src="/assets/images/logo-strashelp-300px.png" class="logo_navbar" alt="StrasHelp" id="logo-image"></a></li>
+			<li><a href="/" class="link_navbar">Accueil</a></li>
+			<li><a href="/annonces" class="link_navbar">Annonces</a></li>
+			<li><a href="/contact" class="link_navbar">Contact</a></li>
+		</ul>
+	</div>
+
+	<div class="uk-navbar-right">
+		<ul class="uk-navbar-nav uk-flex-middle">
+			<li><button class="button_dark-mode" id="button-dark">Dark mode <span uk-icon="icon: eye-slash; ratio: 1.5"></span></button></li>
+			<a class="button_navbar " href="/deposer-une-annonce">Déposer une annonce</a>
+			{% if session.user_id %}		
+				<a href="">Profil</a>
+				<div class="div-modale_profil uk-navbar-dropdown" uk-dropdown="mode: click">
+					<ul class="uk-nav uk-navbar-dropdown-nav">
+						<li><a href="/Admin/informations-personnelles" class="liens-modale_profil">Informations personnelles</a></li>
+						{% if session.is_admin %}
+						<li><a href="/Admin" class="liens-modale_profil">Le Nid</a></li>
+						{% endif %}
+						<li><a href="/logout" class="liens-modale_profil">Déconnexion</a></li>
+					</ul>
+				</div>			
+		{% else %}
+			<div class="inscrit">
+			<div class="connexion_navbar">
+			<li><a href="#modal-center-1" data-uk-toggle=" #modal-center " uk-toggle class="link_navbar">Connexion</a></li>
+			<li><a href="#modal-center-2" data-uk-toggle=" #modal-center " uk-toggle class="link_navbar">Inscription</a></li>
+			</div>
+		{% endif %}
+		</ul>
+	</div>
+</nav>
+
+<!-- Navbar mobile, display none au-dessus de 640px -->
+<nav class="nav_mobile uk-navbar">
+	<div class="uk-navbar uk-align-center">
+	<div class="div-mobile_dark-mode">
+	<button class="button_dark-mode" id="button-dark">Dark mode <span uk-icon="icon: eye-slash; ratio: 1.5"></span></button>
+	</div>
+		<ul class="uk-navbar-nav uk-grid">
+			<li><a href="/" class="link_navbar" uk-icon="icon: home; ratio: 1.5;"></a></li>
+			<li><a href="/annonces" class="link_navbar" uk-icon="icon: search; ratio: 1.5"></a></li>
+			<li><a href="/contact" class="link_navbar" uk-icon="icon: mail; ratio: 1.5"></a></li>
+			<li><a href="/" class="link_navbar" uk-icon="icon: user; ratio: 1.5"></a></li>
+		</ul>
+	</div>
+</nav>

@@ -1,0 +1,44 @@
+
+{# <select name="category" id="category" aria-label="select_dropdown-menu Custom controls">
+                        <option value="0" disabled selected>Choisissez la catégorie...</option>
+                        {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+					<select name="type" id="type" aria-label="select_dropdown-menu Custom controls">
+                        <option value="0" disabled selected>Choisissez la catégorie...</option>
+                        {% for adtype in adtypes %}
+                        <option value="{{ adtype.id }}">{{ adtype.nametype }}</option>
+                        {% endfor %}
+                    </select> #}
+	<section class="container_annonce uk-align-center">
+			{% for annonce in annonces %}			
+				<div class="card_annonce uk-width-1-3">
+					<div class="card-header_annonce">
+						<div class="card-header-hover_annonce">
+							<img src=" {{ annonce.image }}" alt="card_image" class="card-image_annnonce">
+								<a href="/annonces/detail-annonce?id={{ annonce.id }}" class="uk-button card-button_annonce">Voir l'annonce</a> 
+						</div>
+					</div>
+					<div class="card-body_annonce">
+						<h5 class="card-title_annonce">{{ annonce.title }}</h5>
+						<p class="card-description_annonce">
+							{{ annonce.description }}</p>
+					</div>
+					<div class="card-footer_annonce">
+						<div class="card-info_annonce">
+							<p class="card-category_annonce">{{ annonce.name }} <p hidden="hidden">{{ annonce.nametype }}</p>
+							</p>
+							<p class="card-user_annonce">
+								{{ annonce.username }}</p>
+							<p class="card-date-place_annonce">
+								{{ annonce.published_date}}
+								-
+								{{ annonce.localisation}}
+							</p>
+						</div>
+					</div>
+				</div>
+		{% endfor %}			
+	</section>
+	

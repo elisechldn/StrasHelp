@@ -1,0 +1,11 @@
+.dark-mode-body {
+    background-color: var(--background-dark-mode);
+}
+
+.dark-mode-body p,
+.dark-mode-body h2,
+.dark-mode-body h3,
+.dark-mode-body h4,
+.dark-mode-body h5 {
+    color: var(--color-dark-mode) !important;
+}

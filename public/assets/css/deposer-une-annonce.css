@@ -1,0 +1,277 @@
+.h3_deposer-une-annonce {
+    font-family: var(--font-project);
+    font-weight: 600;
+    font-size: var(--h3-size);
+    color: var(--primary-color);
+    margin-bottom: 2vh;
+}
+
+.div-form-container_deposer-une-annonce {
+    background-color: var(--dark-color);
+    border-radius: var(--border-radius-40);
+    padding: 2.5rem 4rem 2.5rem 4rem;
+}
+
+.instructions_deposer-une-annonce {
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+.instructions-center_deposer-une-annonce {
+    color: var(--secondary-color);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Champs input du titre, description et localisation de l'annonce */
+
+.uk-input {
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius-20);
+}
+
+.uk-input:focus {
+    border: 3px solid var(--primary-color);
+    transition: 0ms;
+}
+
+.uk-textarea {
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius-20);
+}
+
+.uk-textarea:focus {
+    border: 3px solid var(--primary-color);
+    transition: 0ms;
+    margin-bottom: 1rem;
+}
+
+/* Boutons radios pour le choix "Recherche" et "Proposition" */
+
+.radio_deposer-une-annonce {
+    font-family: var(--font-project);
+    font-size: var(--button-p-size);
+    color: white;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 3vw;
+    letter-spacing: 0.1rem;
+}
+
+.uk-radio {
+    background-color: var(--dark-color);
+    border: 1px solid white;
+}
+
+.uk-radio:checked:focus {
+    background-color: var(--tertiary-color);
+    border-color: transparent;
+}
+
+.uk-radio {
+    background-color: var(--dark-color);
+    border: 1px solid white;
+}
+
+.uk-radio:checked {
+    background-color: var(--tertiary-color);
+}
+
+.uk-grid-column-small>*,
+.uk-grid-small>* {
+    padding-left: 0;
+}
+
+/* Input upload image */
+
+.upload-img_deposer-une-annonce {
+    background-color: rgba(75, 190, 169, 0.3);
+    border: 2px solid var(--primary-color);
+    transition: 0ms;
+    margin-bottom: 1rem;
+    color: white;
+    justify-content: center;
+    min-height: 10vh;
+}
+
+/* Choisissez la catégorie...
+
+.category_deposer-une-annonce {
+    font-family: var(--font-project);
+    font-weight: 500;
+    font-size: var(--p-size-desktop);
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0px 5px 25px rgba(75, 190, 169, .3);
+    color: var(--dark-color);
+    border-radius: 0rem 0rem 0rem 1.25rem;
+    padding: 1rem;
+}
+
+.category_deposer-une-annonce li {
+    font-family: var(--font-project);
+    font-weight: 500;
+    font-size: var(--p-size-desktop);
+    background-color: white;
+    border-radius: 0rem 0rem 0rem 1.25rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.category_deposer-une-annonce li:hover {
+    font-family: var(--font-project);
+    font-weight: 500;
+    font-size: var(--p-size-desktop);
+    background-color: rgba(75, 190, 169, .3);
+    border-radius: 0rem 0rem 0rem 1.25rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.category_deposer-une-annonce li a {
+    font-family: var(--font-project);
+    font-weight: 500;
+    font-size: var(--p-size-desktop);
+    color: var(--dark-color)
+}
+
+.category_deposer-une-annonce li a:hover {
+    font-family: var(--font-project);
+    font-weight: 500;
+    font-size: var(--p-size-desktop);
+    color: var(--primary-color)
+}*/
+
+/* Bouton "Déposer une annonce" */
+
+.div-button_deposer-une-annonce {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.button_deposer-une-annonce {
+    font-family: var(--font-project);
+    font-weight: 500;
+    background-color: var(--tertiary-color);
+    color: var(--light-color);
+    font-size: var(--button-p-size);
+    border-radius: var(--border-radius-20);
+    box-shadow: 0px 5px 25px rgba(240, 91, 86, 0.3);
+    padding: 0.75rem 1.75rem 0.75rem 1.75rem;
+    border: 0;
+    transition: 250ms;
+}
+
+.button_deposer-une-annonce:hover {
+    font-family: var(--font-project);
+    font-weight: 500;
+    background-color: #57BCCC;
+    box-shadow: 0px 5px 25px rgba(87, 188, 203, 0.3);
+    color: var(--light-color);
+    font-size: var(--button-p-size);
+    border-radius: var(--border-radius-20);
+    padding: 0.75rem 1.75rem 0.75rem 1.75rem;
+    border: 0;
+    transition: 250ms;
+}
+
+@media only screen and (max-width: 640px) {
+
+    .div-form-container_deposer-une-annonce {
+        background-color: var(--dark-color);
+        border-radius: var(--border-radius-40);
+        padding: 1.5rem 2rem 1.5rem 2rem;
+    }
+
+    .h3_deposer-une-annonce {
+        font-family: var(--font-project);
+        font-size: var(--h5-size);
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 2vh;
+    }
+
+    .instructions_deposer-une-annonce {
+        color: var(--secondary-color);
+        font-style: italic;
+        text-align: left;
+        font-size: var(--p-size-mobile);
+    }
+
+    .instructions-center_deposer-une-annonce {
+        color: var(--secondary-color);
+        font-style: italic;
+        text-align: left;
+        font-size: var(--p-size-mobile);
+    }
+
+    /* Boutons radios pour le choix "Recherche" et "Proposition" */
+
+    .radio_deposer-une-annonce {
+        font-family: var(--font-project);
+        font-size: var(--p-size-desktop);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        letter-spacing: 0.1rem;
+        gap: 2vh;
+    }
+
+    /* Champs input du titre, description et localisation de l'annonce */
+
+    .uk-input {
+        margin-bottom: 1rem;
+        border-radius: var(--border-radius-20);
+    }
+
+    .uk-input:focus {
+        border: 3px solid var(--primary-color);
+        transition: 0ms;
+    }
+
+    .uk-textarea {
+        margin-bottom: 1rem;
+        border-radius: var(--border-radius-20);
+    }
+
+    .uk-textarea:focus {
+        border: 3px solid var(--primary-color);
+        transition: 0ms;
+        margin-bottom: 1rem;
+    }
+
+    /* Bouton "Déposer une annonce" */
+
+    .div-button_deposer-une-annonce {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .button_deposer-une-annonce {
+        font-family: var(--font-project);
+        font-weight: 500;
+        background-color: var(--tertiary-color);
+        color: var(--light-color);
+        font-size: var(--p-size-desktop);
+        border-radius: var(--border-radius-20);
+        box-shadow: 0px 5px 25px rgba(240, 91, 86, 0.3);
+        padding: 0.75rem 1.75rem 0.75rem 1.75rem;
+        border: 0;
+        transition: 250ms;
+    }
+
+    .button_deposer-une-annonce:hover {
+        font-family: var(--font-project);
+        font-weight: 500;
+        background-color: #57BCCC;
+        box-shadow: 0px 5px 25px rgba(87, 188, 203, 0.3);
+        color: var(--light-color);
+        font-size: var(--p-size-desktop);
+        border-radius: var(--border-radius-20);
+        padding: 0.75rem 1.75rem 0.75rem 1.75rem;
+        border: 0;
+        transition: 250ms;
+    }
+}

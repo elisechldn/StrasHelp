@@ -1,0 +1,41 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<main class="uk-container uk-container-large">
+<section class="uk-container-medium">
+    <div>
+	    <h3 class="h3_dashboard">Édition du profil</h3>
+        <p class="description_dashboard uk-align-center">Vous pourrez ici modifier tous les champs d'un utilisateur, vous pouvez modifier votre avatar en survolant votre photo de profil.</p>
+    </div>
+    <!-- Détails des informations -->
+	<div class="container_informations-personnelles">
+		<div class="uk-width-1-3 uk-align-center">
+			<div class="card-user_informations-personnelles">
+				<input type="file" aria-label="Custom controls">
+				<p class="user_informations-personnelles">{{ updates.username }}</p>
+			</div>
+		</div>
+		<form action="/Admin/gestion-des-utilisateurs/editer?id={{ updates.id }}" method="POST" class="uk-width-2-3 uk-align-center container_edition div-container_informations-personnelles">
+		
+            <label class="label_informations-personnelles">Prénom(s)</label>
+			<input class="values_informations-personnelles" type="text" name="firstname" value="{{ updates.firstname }}">
+			<label class="label_informations-personnelles">Nom(s)</label>
+			<input class="values_informations-personnelles" type="text" name="lastname" value="{{ updates.lastname }}">
+			<label class="label_informations-personnelles">Adresse mail</label>
+			<input class="values_informations-personnelles" type="text" name="email" value="{{ updates.email }}">
+			<label class="label_informations-personnelles">Mot de passe</label>
+			<input class="values_informations-personnelles" type="password" name="password" value="{{ updates.password }}">
+			<label class="label_informations-personnelles">Date de naissance</label>
+			<input class="values_informations-personnelles" type="date" name="birthdate" value="{{ updates.birthdate }}">
+			<label class="label_informations-personnelles">Téléphone</label>
+			<input class="values_informations-personnelles" type="text" name="phone_number" value="{{ updates.phone_number }}">
+			<input type="hidden" name="username" value="{{ updates.username }}">
+			<input type="hidden" name="localisation" value="{{ updates.localisation }}">
+			<input type="hidden" name="id" value="{{ updates.id }}">
+            <input type="submit" class="button_edition register-submit uk-width-1-2 uk-align-center" value="Enregistrer les modifications">
+		</form>
+		</div>
+	</div>
+</section>
+</main>
+{% endblock %}

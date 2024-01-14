@@ -1,0 +1,25 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<main class="uk-container uk-container-small">
+   <form  action=""  method="POST">
+   <div class="tous uk-padding">
+   <h2> Répondre a une annonce</h2>
+        
+        <div class="mail">
+          <label  for="mail"> </label>
+          <input  type="email" placeholder="E-mail" id="mail"  name="user_email">
+        </div>
+          <div class="tel">
+          <label  for="telephone"></label>
+          <input  type="telephone"  placeholder="Téléphone"  id="telephone"  name="user_telephone">
+          </div>
+    <div class="uk-margin">
+    <textarea class="uk-textarea uk-border-rounded uk-box-shadow-medium" placeholder="ecrire votre message ici" name="user_description" ></textarea>
+         </div>
+          <div  class="button">
+          <button  type="submit">Envoyer votre message</button>
+          </div> </div>
+  </form>
+</main>
+{% endblock %}

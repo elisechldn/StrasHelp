@@ -1,0 +1,74 @@
+.title-select_dropdown-menu {
+    font-family: var(--font-project);
+    font-size: var(--button-p-size);
+    font-weight: 600;
+    color: var(--tertiary-color);
+}
+
+.input_dropdown-menu {
+    background-color: var(--dark-color);
+    border: 5px solid var(--primary-color);
+    color: white;
+    font-family: var(--font-project);
+    font-weight: 500;
+    font-size: var(--p-size-desktop);
+    border-radius: var(--border-radius-20);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-transform: none;
+    letter-spacing: 0.1rem;
+}
+
+.select_dropdown-menu option {
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    color: var(--dark-color);
+}
+
+.option_dropdown-menu {
+    font-family: var(--font-project);
+    font-weight: 500;
+    font-size: var(--p-size-deskptop);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-transform: none;
+    color: var(--dark-color);
+}
+
+.uk-dropdown {
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0px 5px 25px rgba(75, 190, 169, .3);
+    color: var(--dark-color);
+    border-radius: 0rem 0rem 0rem 1.25rem;
+}
+
+.uk-dropdown-nav li {
+    font-family: var(--font-project);
+    font-weight: 500;
+    font-size: var(--p-size-desktop);
+    background-color: white;
+    border-radius: 0rem 0rem 0rem 1.25rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.uk-dropdown-nav li:hover {
+    font-family: var(--font-project);
+    font-weight: 500;
+    font-size: var(--p-size-desktop);
+    background-color: rgba(75, 190, 169, .3);
+    border-radius: 0rem 0rem 0rem 1.25rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.uk-dropdown-nav li a {
+    font-family: var(--font-project);
+    font-weight: 500;
+    font-size: var(--p-size-desktop);
+    color: var(--dark-color)
+}
+
+.uk-dropdown-nav li a:hover {
+    font-family: var(--font-project);
+    font-weight: 500;
+    font-size: var(--p-size-desktop);
+    color: var(--primary-color)
+}

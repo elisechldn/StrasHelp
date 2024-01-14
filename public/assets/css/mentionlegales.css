@@ -1,0 +1,15 @@
+.mentions-legales-first-title{
+    font-family: var(--font-project);
+    font-weight: 600;
+    font-size: var(--h3-size);
+    color: var(--primary-color);
+    margin-bottom: 2vh;
+}
+
+.mentions-legales-second-title{
+    font-family: var(--font-project);
+    font-weight: 400;
+    font-size: var(--h5-size);
+    color: var(--h-color);
+    margin-bottom: 2vh;
+}

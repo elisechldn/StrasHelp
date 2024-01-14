@@ -1,0 +1,23 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<main class="uk-container uk-container-large">
+	<section class="uk-section uk-container-large img_section">
+		<div class="uk-align-center uk-margin-large-bottom">
+			{% include "Components/_searchbar.html.twig" %}
+		</div>
+		<div class="uk-margin-large-bottom">
+			{% include 'Components/_toggle-switch.html.twig' %}
+		</div>
+		
+	</section>
+    {% include "Components/_card.html.twig" %}
+	<section class="container_annonce  uk-align-center" id="newCard"></section>
+   <div>
+	<button id="button_load" class="charger-plus uk-width-auto uk-flex uk-align-center" value="1" data-type="" >Charger plus</button>
+    </div>
+	<section>
+		{% include "Components/_trouver-proposer.html.twig" %}
+	</section>
+</main>
+{% endblock %}

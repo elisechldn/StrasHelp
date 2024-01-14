@@ -1,0 +1,28 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<main class="uk-container uk-container-large">
+<section class="uk-section uk-container-medium">
+    <div>
+	    <h3 class="h3_dashboard">Bienvenue sur votre tableau de bord !</h3>
+        <p class="description_dashboard uk-align-center">Vous retrouverez ici toutes les fonctionnalitées avancées vous permettant d'ajouter, consulter, supprimer une de vos annonces ou celle d'un utilisateur. Ainsi que le contrôle total sur les profils des utilisateurs.</p>
+    </div>
+    <div class="div-annonce_dashboard uk-flex-inline uk-width-expand">
+        <h5>Une recherche précise, une envie d'aider ?</h5>
+        <a class="button-annonce_dashboard" href="deposer-une-annonce">Déposer une annonce</a>
+    </div>
+    <div uk-grid>
+        <div class="uk-width-expand">
+            <h5 class="historique_dashboard">Historique de vos annonces</h5>
+        <div class="uk-width-1-2 uk-align-left">{% include "Components/_card.html.twig" %}</div>
+        </div>
+            <div class="uk-width-1-2 div-buttons_dashboard uk-align-right">
+                <a class="button-category_dashboard" href="Admin/gestion-des-categories">Gestion des catégories</a>
+                <a class="button-gestion_dashboard" href="Admin/gestion-des-utilisateurs">Gestion des utilisateurs</a>
+                <a class="button-moderation_dashboard" href="Admin/moderation-des-annonces">Modération des annonces</a>
+                <a class="button-informations_dashboard" href="Admin/informations-personnelles">Informations personnelles</a>
+            </div>
+    </div>
+</section>
+</main>
+{% endblock %}

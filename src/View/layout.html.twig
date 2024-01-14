@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/assets/images/favicon.png">
+		<link rel="stylesheet" href="mentionlegales.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.6/dist/css/uikit.min.css"/>
+		<title>
+			{% block title %}Strashelp - L'entraide Strasbourgeoise{% endblock %}
+		</title>
+
+		{% block stylesheet %}
+			<link rel="stylesheet" href="/assets/css/style.css">
+		{% endblock %}
+	</head>
+	<body>
+	<header>		
+		{% include 'Components/_navbar.html.twig' %}
+		{% include 'Components/_login.html.twig' %}
+		{% include 'Components/_form_register.html.twig' %}
+		</header>
+		{% block content %}
+		{% endblock %}
+		{% include 'Components/_footer.html.twig' %}	
+		{% block javascript %}
+			<script src="/assets/JS/script.js"></script>
+			<script src="/assets/JS/script_loadmore.js"></script>
+			<script src="/assets/JS/dark-mode.js"></script>
+			<script src="/assets/JS/easter-egg.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.6/dist/js/uikit.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.8/dist/js/uikit-icons.min.js"></script>
+		{% endblock %}
+	</body>
+</html>

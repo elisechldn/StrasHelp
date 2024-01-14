@@ -1,0 +1,39 @@
+<section class="section_toggle-switch uk-container uk-container-medium uk-align-left">
+
+<div class="uk-width-2-3 uk-align-left">
+  <!-- Toggle switch à 3 entrées - laptop version -->
+   <div id="type" class="switch_3_ways_v2_laptop">
+      <!-- Afficher ici une un for de toutes les annonces sans cibler un ads_type -->
+      <div id="toutes"  class="switch2 toutes" onclick="change_period2_laptop('toutes')">Toutes</div>
+      <!-- Afficher ici une boucle for "Recherches" dans recherches -->
+      <div id="recherches"  class="switch2 recherches" onclick="change_period2_laptop('recherches')">Recherches</div>
+      <!-- Afficher ici une boucle for "Propositions" dans propositions -->
+      <div id="propositions" class="switch2 propositions" onclick="change_period2_laptop('propositions')">Propositions</div>
+      <div id="selector1" class="selector1"></div>
+  </div>
+</div>
+
+  <!-- Toggle switch à 3 entrées - mobile version -->
+  <div class="switch_3_ways_v2_mobile">
+    <div id="toutes2" class="switch2 toutes2" onclick="change_period2_mobile('toutes2')">Toutes</div>
+    <div id="recherches2" class="switch2 recherches2" onclick="change_period2_mobile('recherches2')">Recherches</div>
+    <div id="propositions2" class="switch2 propositions2" onclick="change_period2_mobile('propositions2')">Propositions</div>
+    <div id="selector2" class="selector2"></div>
+  </div>
+<div name="0" id="typediv"></div>
+<!-- Select menu "Choisissez la catégorie..." -->
+  {# <div class="uk-width-auto" uk-form-custom="target: > * > span:first-child">
+  <p class="title-select_dropdown-menu">Tri par :</p>
+			<select name="category" aria-label="select_dropdown-menu Custom controls">
+                <option value="" disabled selected>Choisissez la catégorie...</option>
+                {% for category in categorie %}
+                <option value="{{ category.name }}">{{ category.name }}</option>
+                {% endfor %}
+            </select>
+            <button class="input_dropdown-menu uk-button uk-align-center" type="button" tabindex="-1">
+                <span></span>
+                <span uk-icon="icon: chevron-down"></span>
+            </button>
+        </div>
+</section> #}
+

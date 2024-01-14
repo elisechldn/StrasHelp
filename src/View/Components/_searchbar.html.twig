@@ -1,0 +1,22 @@
+<section>
+    <h3 class="h3_searchbar">Que recherchez-vous ?</h3>
+        <form action="/annonces" method="GET" class="form_searchbar uk-container-small uk-align-center uk-flex-middle">
+        {# Select pour les catégories #}
+            <div class="uk-width-1-4@m">
+                <select class="select_searchbar uk-width-expand" name="categorie" id="category">
+                    <option value="">Catégorie</option>
+                        {% for category in categories %}
+                            <option  class="dropdown-child" value={{ category.id }}>{{ category.name }}</option>
+                        {% endfor %}
+                </select>
+            </div>
+            {# Recherche pour mots clefs #}
+            <div class="uk-align-center uk-width-2-4@m">
+                <input type= "search" name="searchbar" placeholder="Entrez votre recherche" class="input_searchbar uk-width-expand">
+            </div>
+            {# Submit recherche #}
+            <div class="uk-width-1-4@m">
+                <input type="submit" class="button-recherche_searchbar" name="sendSearch" value="Rechercher">
+            </div>
+        </form>
+</section>

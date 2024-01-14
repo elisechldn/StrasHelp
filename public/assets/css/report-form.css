@@ -1,0 +1,38 @@
+.reportSection{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.report{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15%;
+    border:2px solid;
+    border-radius: var(--border-radius-80);
+    background-color: var(--dark-color);
+    width:30%;
+    height: 60vh;
+    padding: 4.375rem 5.625rem 4.375rem 5.625rem;
+}
+
+.report p{
+    color: var(--light-color);
+    font-size:var(--p-size-desktop);
+}
+
+.report>h2{
+    font-size: var(--h2-size);
+    color: var(--primary-color);
+    font-weight:600;
+    margin-bottom: 0;
+}
+
+.form-button{
+    display: flex;
+    width:87%;
+    justify-content: flex-end;
+}

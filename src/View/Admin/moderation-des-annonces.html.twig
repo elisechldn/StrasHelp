@@ -1,0 +1,38 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<main class="uk-container uk-container-large">
+<section class="uk-section uk-container-medium">
+    <div>
+	    <h3 class="h3_dashboard">Modération des annonces</h3>
+        <p class="description_dashboard uk-align-center">Vous pourrez depuis ici modérer les annonces des utilisateurs, il se peut qu'il y ait du contenu inaproprié. <br>Vous pouvez cliquer sur le titre de l'annonce pour vous rediriger vers son détail. Si vous voulez supprimer l'annonce car elle n'est pas adapté aux CGU, utilisez le bouton supprimer.</p>
+    </div>
+    <!-- Table gestion des annonces -->
+    <div class="uk-width-expand">
+    <table class="uk-table uk-table-justify uk-table-divider">
+    <thead>
+        <tr class="th_gestion-des-categories">
+            <th class="uk-width-1-5">Image</th>
+            <th class="uk-width-1-5">Catégorie</th>
+            <th class="uk-width-2-5">Titre</th>
+            <th class="uk-width-1-5">Action(s)</th>
+        </tr>
+    </thead>
+    <tbody>{% for adform in ads %}
+        <tr class="tr_dashboard">           
+            <td class="td_moderation-des-annonces uk-width-1-5"><img src="{{ adform.image }}" class="image_moderation-des-annonces"></td>
+            <td class="td_moderation-des-annonces uk-width-1-5">{{ adform.name }}</td>
+            <td class="td_moderation-des-annonces uk-width-2-5"><a href="">{{ adform.title }}<a/></td>           
+            <td><form action="../Admin/moderation-des-annonces/delete" method="post">
+            <input type="hidden" name="id" value="{{ adform.id }}">
+            <button class="uk-button uk-button-default uk-width-1-5 button_supprimer" type="submit">Supprimer</button></td>
+            </form></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+    </div>
+</section>
+</main>
+{% endblock %}

@@ -1,0 +1,193 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+*+address,
+*+dl,
+*+fieldset,
+*+figure,
+*+ol,
+*+p,
+*+pre,
+*+ul {
+    margin-top: 0.25rem;
+}
+
+/* Contenants des cards en ligne de 3 */
+
+.container_annonce {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    gap: 2vw;
+}
+
+/* Card compléte */
+
+.card_annonce {
+    display: flex;
+    flex-direction: column;
+    width: clamp(24rem, calc(24rem + 2vw), 26rem);
+    overflow: hidden;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-20);
+    background-color: #FFFFFF;
+    margin-bottom: 2%;
+}
+
+.card_annonce:hover {
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.5);
+    transition: 250ms;
+}
+
+/* Container de l'image de l'annonce */
+
+.card-header_annonce {
+    position: relative;
+    align-items: center;
+    background-color: var(--dark-color);
+    border-radius: var(--border-radius-20);    
+    width: auto;
+    height: auto;
+}
+
+/* Image de l'annonce avec bouton de redirection au hover */
+
+.card-header-hover_annonce img {
+    display: block;
+    object-fit: cover;
+    border-radius: var(--border-radius-20);
+    aspect-ratio: 1 / 0.7;
+}
+
+.card-header-hover_annonce:hover {
+    position: relative;
+    display: block;
+    background-color: var(--dark-color);
+    border-radius: var(--border-radius-20);
+    transition: 250ms;
+}
+
+.card-header-hover_annonce:hover .uk-button {
+    z-index: 1;
+    opacity: 1;
+}
+
+.card-header-hover_annonce:hover img {
+    opacity: 0.4;
+}
+
+/* Titre et description de l'annonce */
+
+.card-body_annonce {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.card-title_annonce {
+    font-family: var(--font-project);
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--p-color);
+    margin-bottom: 0.25rem;
+}
+
+.card-description_annonce {
+    font-family: var(--font-project);
+    font-weight: 400;
+    font-size: var(--p-size);
+    color: var(--p-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Catégorie et informations sur l'utilisateur et la date de publication de l'annonce ainsi que sa localisation */
+
+.card-category_annonce {
+    font-family: var(--font-project);
+    font-weight: 600;
+    font-size: var(--h5-size);
+    color: var(--p-color);
+    margin-bottom: 1rem;
+}
+
+.card-footer_annonce {
+    display: flex;
+    padding: 1rem;
+    margin-top: auto;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+}
+
+.card-user_annonce {
+    font-family: var(--font-project);
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin-bottom: 0;
+}
+
+.card-date-place_annonce {
+    font-family: var(--font-project);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--p-color-muted);
+    margin-bottom: 0;
+}
+
+/* Bouton de redirection vers la page de l'annonce, apparaissant au hover de l'image */
+
+.card-button_annonce {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-size: var(--button-p-size);
+    border-radius: var(--border-radius-20);
+    box-shadow: 0px 5px 25px rgba(75, 190, 169, .3);
+    width: 70%;
+    padding: 0.25em 0.5em;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.card-button_annonce:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    font-size: var(--button-p-size);
+    border-radius: var(--border-radius-20);
+    box-shadow: 0px 5px 25px rgba(241, 172, 147, 0.3);
+    width: 70%;
+    font-weight: 400;
+}
+
+.card-button_annonce a:hover {
+    opacity: 1;
+    font-family: var(--font-project);
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--light-color) !important;
+}
+
+/* Responsive mobile */
+
+@media only screen and (max-width: 640px) {
+    
+    .container_annonce {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 85vw;
+        margin-block: 2rem;
+        gap: 2rem;
+    }
+
+    .card-category_annonce {
+        font-family: var(--font-project);
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--p-color);
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,22 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<main class="uk-container uk-container-large">
+<section class="section-annonce_detail-annonce uk-align-center">
+		<div class="div-annonce_detail-annonce uk-align-left">
+			<img src="../.{{ annonceID.image }}" alt="{{ annonceID.title }}" class="image_detail-annonce">
+            <h3 class="title_detail-annonce">{{ annonceID.title }}</h3>
+			<p class="description_detail-annonce">{{ annonceID.description}} </p>
+			<p class="category_detail-annonce">{{ annonceID.name }}</p>
+			<p class="date_place_detail-annonce">{{ annonceID.published_date }} - {{annonceID.localisation }}</p>
+		</div>
+		<div class="div-user_detail-annonce">
+			<div class="card-user_detail-annonce">
+				<img src="https://source.unsplash.com/600x400/?car,automobile" alt="{{ annonceID.title }}">
+				<p class="user_detail-annonce">{{ annonceID.username }}</p>
+			</div>
+			<a class="uk-button button_detail-annonce" href="/annonce/detail-annonce/reponse">Contactez l'annonceur</a>
+		</div>
+</section>
+</main>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<main class="uk-container uk-container-large">
+<section class="uk-section uk-container-medium">
+    <div>
+	    <h3 class="h3_dashboard">Gestion des catégories</h3>
+        <p class="description_dashboard uk-align-center">Vous pourrez depuis ici ajouter ou supprimer une catégorie, la liste complète y est inscrite ici.</p>
+    </div>
+    <!-- Ajout d'une nouvelle catégorie -->
+    <form action="/Admin/gestion-des-categories/add" class="uk-width-2-3 uk-align-center" method="POST">
+    <fieldset class="uk-fieldset">
+        <legend class="uk-legend"> Ajoutez ici une nouvelle catégorie</legend>
+        <div class="uk-margin">
+            <input class="uk-input input_ajout-category" type="text" placeholder=" {{ errors ? errors.ajout : "Nom de la nouvelle catégorie..." }} " aria-label="Input" name="ajout">
+        </div>
+        <input class="uk-button uk-button-default uk-align-left uk-width-auto button_ajouter" type="submit" value="Ajouter la catégorie">
+    </fieldset>
+</form>
+    <!-- Table gestion des catégories -->
+    <div class="uk-width-expand">
+    <table class="uk-table uk-table-justify uk-table-divider">
+    <thead>
+        <tr class="th_gestion-des-categories">
+            <th class="uk-width-small">Id</th>
+            <th class="uk-width-expand">Catégorie</th>
+            <th>Action(s)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for category in categories %} 
+        <tr class="tr_dashboard">
+            <td class="td_gestion-des-categories uk-width-small"> {{ category.id }}</td>
+            <td class="td_gestion-des-categories uk-width-expand"> {{ category.name }} </td>
+            <td><a href="/Admin/gestion-des-categories/delete?id={{ category.id }}" class="uk-button uk-button-default uk-flex uk-flex-middle button_supprimer">Supprimer</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+    </div>
+</section>
+</main>
+{% endblock %}

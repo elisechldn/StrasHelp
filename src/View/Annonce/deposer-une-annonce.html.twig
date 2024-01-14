@@ -1,0 +1,61 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<main class="uk-container uk-container-large">
+<section class="section_deposer-une-annonce uk-container-small uk-align-center">
+	<div class="div-form-container_deposer-une-annonce">
+        <form action="" method="post" enctype="multipart/form-data">
+            <fieldset class="uk-fieldset">
+                <h3 class="h3_deposer-une-annonce uk-legend">Déposer une annonce</h3>
+                <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                    <p class="instructions-center_deposer-une-annonce uk-align-center">Choisissez le type de votre future annonce en cochant l'une des deux cases ci-dessous</p>
+                <div class="radio_deposer-une-annonce uk-width-auto uk-align-center" name="ads_type">
+              {% for adtype in adtypes %}
+                    <label><input class="uk-radio" type="radio" name="radio" value="{{ adtype.id }}"> {{ adtype.nametype }} </label>                   
+                    {% endfor %}
+                </div>
+            </div>
+
+        <div class="uk-margin">
+                <p class="instructions-center_deposer-une-annonce uk-align-center">Votre annonce se verra attribuer une catégorie, choisissez la plus adaptée dans le menu déroulant ci-dessous</p>
+                <!-- Select menu "Choisissez la catégorie..." -->
+                <div class="uk-width-auto uk-align-center" uk-form-custom="target: > * > span:first-child">
+                    <select name="category" aria-label="select_dropdown-menu Custom controls">
+                        <option value="" disabled selected>Choisissez la catégorie...</option>
+                        {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button class="input_dropdown-menu uk-button uk-align-center" type="button" tabindex="-1">
+                        <span></span>
+                        <span uk-icon="icon: chevron-down"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Titre et description de l'annonce -->
+            <div class="uk-margin">
+                <p class="instructions_deposer-une-annonce">Nous allons donner un titre et une description pour détailler votre annonce</p>
+                <input class="uk-input" type="text" value="{{ ads.title }}" placeholder="{{ erreurs ? erreurs.title : "Titre de votre annonce..." }}" aria-label="Input" name="title">
+                <textarea class="uk-textarea" value="{{ ads.description }}" rows="5" placeholder="{{ erreurs ? erreurs.description : "Description de votre annonce..." }}" aria-label="Textarea" name="description"></textarea>
+                
+            </div>
+            
+            <!-- Images de l'annonce -->
+            <div class="uk-margin">
+                <p class="instructions_deposer-une-annonce">Quelques photos pour illustrer (minimum 1, taille de photo maximale 2MO)</p>
+                <input class="upload-img_deposer-une-annonce uk-input" type="file" placeholder="Photos d'illustrations" aria-label="Input" name="image">
+                {{ erreurs.image }}
+            </div>
+
+            <div class="uk-align-right">
+            <input type="submit" name="submit" value="Déposer cette annonce" class="button_deposer-une-annonce">
+                {# <button class="button_deposer-une-annonce" href="">Déposer cette annonce</button> #}
+            </div>
+
+            </fieldset>
+        </form>
+	</div>
+</section>
+</main>
+{% endblock %}

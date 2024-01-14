@@ -1,0 +1,14 @@
+<section class="uk-container-large">
+		<form action="" method="POST" class="uk-align-center div-container_informations-personnelles">
+			<h3 class="h3_contact">Contactez-nous</h3>
+				<input class="values_informations-personnelles uk-width-2-2" type="text" placeholder=" {{ errors ?  errors.email  :  "Adresse mail" }} " name="email">
+				<div class="div-values_contact">
+				<input class="values_informations-personnelles uk-width-2-2" type="text" placeholder="{{ errors ? errors.firstname : "Prénom" }}" name="firstname">
+				<input class="values_informations-personnelles uk-width-2-2" type="text" placeholder="{{ errors ? errors.lastname : "Nom" }}" name="lastname">
+				</div>
+				<textarea class="values_informations-personnelles uk-width-expand" placeholder="{{ errors ? errors.message : "Votre message..." }}" name="message"></textarea>
+				<div class="div-button_envoi">
+				<input type="submit" class="button_envoi">
+				<div>
+		</form>
+</section>

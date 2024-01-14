@@ -1,0 +1,17 @@
+<div class="uk-margin">
+	<p class="instructions-center_deposer-une-annonce uk-align-center">Votre annonce se verra attribuer 
+    une catégorie, choisissez la plus adaptée dans le menu déroulant ci-dessous</p>
+	<!-- Select menu "Choisissez la catégorie..." -->
+	<div class="uk-width-auto uk-align-center" uk-form-custom="target: > * > span:first-child">
+		<select name="category" aria-label="select_dropdown-menu Custom controls">
+			<option value="" disabled selected>Choisissez la catégorie...</option>
+			{% for category in categories %}
+				<option value="{{ category.id }}">{{ category.name }}</option>
+			{% endfor %}
+		</select>
+		<button class="input_dropdown-menu uk-button uk-align-center" type="button" tabindex="-1">
+			<span></span>
+			<span uk-icon="icon: chevron-down"></span>
+		</button>
+	</div>
+</div>
