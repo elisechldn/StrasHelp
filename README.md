@@ -13,3 +13,7 @@ Le projet a été réalisé en se basant sur un backlog défini par l’équipe 
 <h2>STACKS UTILISÉES</h2>
 
 HTML5 - CSS3 - Twig - MySQL - JavaScript - Architecture MVC
+
+<h2>Visuel du site</h2>
+
+Lien du projet déployé : https://strashelp-092023.strasbourg-1.wilders.dev
